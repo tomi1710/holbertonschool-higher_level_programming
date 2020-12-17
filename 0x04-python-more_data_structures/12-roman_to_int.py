@@ -4,7 +4,7 @@ def roman_to_int(roman_string):
     a = 0
     if (roman_string is None):
         return (0)
-    if isinstance(roman_string, list) == False:
+    if isinstance(roman_string, list) is False:
         return (0)
 
     for i in range(len(roman_string) - 1):
