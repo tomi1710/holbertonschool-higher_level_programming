@@ -23,4 +23,7 @@ def roman_to_int(roman_string):
         roman = (roman + 10) - a
     elif (roman_string[-1] == 'V'):
         roman = (roman + 5) - a
+    elif (roman_string[-1] == 'L'):
+        roman = (roman + 50) - a
+
     return (roman)
