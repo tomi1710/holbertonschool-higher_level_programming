@@ -4,6 +4,8 @@ def roman_to_int(roman_string):
     a = 0
     if (roman_string is None):
         return (0)
+    if isinstance(roman_string, list) == False:
+        return (0)
 
     for i in range(len(roman_string) - 1):
         if roman_string[i] == 'M':
