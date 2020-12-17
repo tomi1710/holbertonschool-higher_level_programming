@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def best_score(a_dictionary):
-    if a_dictionary is not None:
+    if a_dictionary:
         mx = 0
         for i in a_dictionary:
             if (mx < a_dictionary[i]):
