@@ -11,6 +11,9 @@ def roman_to_int(roman_string):
         if roman_string[i] == 'M':
             roman = roman + 1000
         elif roman_string[i] == 'D':
+            if (roman_string[i + 1] = 'M':
+                roman = roman + 400
+                i = i + 1
             roman = roman + 500
         elif roman_string[i] == 'C':
             roman = roman + 100
@@ -22,18 +25,12 @@ def roman_to_int(roman_string):
             roman = roman + 5
         elif roman_string[i] == 'I':
             a = a + 1
+
     if (roman_string[-1] == 'I'):
         roman = roman + a + 1
     elif (roman_string[-1] == 'X'):
         roman = (roman + 10) - a
     elif (roman_string[-1] == 'V'):
         roman = (roman + 5) - a
-    elif (roman_string[-1] == 'L'):
-        roman = (roman + 50) - a
-    elif (roman_string[-1] == 'C'):
-        roman = (roman + 100) - a
-    elif (roman_string[-1] == 'D'):
-        roman = (roman + 500) - a
-    elif (roman_string[-1] == 'M'):
-        roman = (roman + 1000) - a
+    elif (
     return (roman)
