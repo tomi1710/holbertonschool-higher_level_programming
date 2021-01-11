@@ -4,7 +4,6 @@
 This module has only one function that calculates the product of two matrices
 """
 
-
 def matrix_mul(m_a, m_b):
     """ matrix_mul(m_a, m_b)
     Function that multiplies two matrices. Each matrix should be a list of
