@@ -1,47 +1,6 @@
 >>> MyList = __import__('1-my_list').MyList
 
->>> my_list0 = MyList()
->>> my_list0.append(1)
->>> my_list0.append(4)
->>> my_list0.append(2)
->>> my_list0.append(3)
->>> my_list0.append(5)
->>> print(my_list0)
-[1, 4, 2, 3, 5]
->>> my_list0.print_sorted()
-[1, 2, 3, 4, 5]
->>> print(my_list0)
-[1, 4, 2, 3, 5]
-
->>> my_list1 = MyList()
->>> my_list1.append(1)
->>> my_list1.append(4)
->>> my_list1.append(-2)
->>> my_list1 += [-8]
->>> my_list1.append(-3)
->>> my_list1.append(5)
->>> print(my_list1)
-[1, 4, -2, -8, -3, 5]
->>> my_list1.print_sorted()
-[-8, -3, -2, 1, 4, 5]
->>> print(my_list1)
-[1, 4, -2, -8, -3, 5]
-
->>> my_list2 = MyList()
->>> print(my_list2)
-[]
-
->>> my_list3 = MyList()
->>> my_list3.append(123)
->>> print(my_list3)
-[123]
-
->>> my_list1
-[1, 4, -2, -8, -3, 5]
-
 >>> my_list = MyList()
->>> isinstance(my_list, MyList)
-True
 
 >>> type(my_list)
 <class '1-my_list.MyList'>
@@ -49,5 +8,43 @@ True
 >>> type(my_list) == MyList
 True
 
+>>> print(my_list)
+[]
+
+>>> isinstance(my_list, MyList)
+True
+
+>>> isinstance(my_list, list)
+True
+
 >>> issubclass(MyList, list)
 True
+
+>>> l2 = MyList(my_list)
+>>> l2 = [3, 7, 0, 1, 6]
+>>> l2.print_sorted()
+Traceback (most recent call last):
+AttributeError: 'list' object has no attribute 'print_sorted'
+
+>>> my_list.print_sorted()
+[]
+
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(5)
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+
+>>> my_list
+[1, 4, 2, 3, 5]
+
+>>> my_list.append(-1)
+>>> my_list.append(-4)
+>>> my_list += [-8]
+>>> my_list.append(-5)
+>>> my_list.print_sorted()
+[-8, -5, -4, -1, 1, 2, 3, 4, 5]
