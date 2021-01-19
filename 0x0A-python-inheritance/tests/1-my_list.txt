@@ -1,0 +1,53 @@
+>>> MyList = __import__('1-my_list').MyList
+
+>>> my_list0 = MyList()
+>>> my_list0.append(1)
+>>> my_list0.append(4)
+>>> my_list0.append(2)
+>>> my_list0.append(3)
+>>> my_list0.append(5)
+>>> print(my_list0)
+[1, 4, 2, 3, 5]
+>>> my_list0.print_sorted()
+[1, 2, 3, 4, 5]
+>>> print(my_list0)
+[1, 4, 2, 3, 5]
+
+>>> my_list1 = MyList()
+>>> my_list1.append(1)
+>>> my_list1.append(4)
+>>> my_list1.append(-2)
+>>> my_list1 += [-8]
+>>> my_list1.append(-3)
+>>> my_list1.append(5)
+>>> print(my_list1)
+[1, 4, -2, -8, -3, 5]
+>>> my_list1.print_sorted()
+[-8, -3, -2, 1, 4, 5]
+>>> print(my_list1)
+[1, 4, -2, -8, -3, 5]
+
+>>> my_list2 = MyList()
+>>> print(my_list2)
+[]
+
+>>> my_list3 = MyList()
+>>> my_list3.append(123)
+>>> print(my_list3)
+[123]
+
+>>> my_list1
+[1, 4, -2, -8, -3, 5]
+
+>>> my_list = MyList()
+>>> isinstance(my_list, MyList)
+True
+
+>>> type(my_list)
+<class '1-my_list.MyList'>
+
+>>> type(my_list) == MyList
+True
+
+>>> issubclass(MyList, list)
+True
