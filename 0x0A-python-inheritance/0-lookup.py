@@ -1,4 +1,4 @@
-#!/uar/bin/python3
+#!/usr/bin/python3
 """ lists all atributes and objects """
 
 
