@@ -21,7 +21,7 @@ class Square(BaseGeometry):
     def __init__(self, size):
         """ init """
         self.__size = size
-        BaseGeometry.integer_validator(self, size, self.__size)
+        BaseGeometry.integer_validator(self, "size", self.__size)
 
     def area(self):
         """ returns the area of the square """
