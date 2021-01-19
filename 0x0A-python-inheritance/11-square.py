@@ -15,6 +15,7 @@ class BaseGeometry:
         elif (value <= 0):
             raise ValueError("{} must be greater than 0".format(name))
 
+
 class Square(BaseGeometry):
     """ defines a class Square inherited from BaseGeometry """
     def __init__(self, size):
