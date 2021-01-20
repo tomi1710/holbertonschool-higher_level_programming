@@ -10,7 +10,7 @@ loadj = __import__('6-load_from_json_file').load_from_json_file
 filename = "add_item.json"
 mylist = []
 
-if os.path.isfile(filename) == False:
+if os.path.isfile(filename) is False:
     savej(mylist, filename)
 
 mylist = loadj(filename)
