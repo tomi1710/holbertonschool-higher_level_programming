@@ -11,7 +11,7 @@ def pascal_triangle(n):
 
     if n <= 0:
         return mylist
-        
+
     mylist = [1]
     mylist3.append(mylist)
     for a in range(n - 1):
