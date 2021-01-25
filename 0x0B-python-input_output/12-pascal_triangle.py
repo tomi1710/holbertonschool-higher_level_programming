@@ -5,16 +5,23 @@
 
 def pascal_triangle(n):
     """ def """
-    my_list = []
-    if n <= 0:
-        return my_list
+    mylist = []
+    mylist2 = []
+    mylist3 = []
 
-    my_list
-    a = 1
-    for i in range(1, n + 1):
-        if i == 1:
-            my_list.append(str(a))
-        else:
-            a = (a + (a * 10))
-            my_list.append(str(a))
-    return my_list
+    if n <= 0:
+        return mylist
+
+    mylist = [1]
+    mylist3.append(mylist)
+    for a in range(n - 1):
+        for i in range(len(mylist) + 1):
+            if ((i == 0) or (i == len(mylist))):
+                mylist2.append(1)
+            else:
+                mylist2.append(mylist[i] + mylist[i - 1])
+        mylist3.append(mylist2)
+        mylist = mylist2
+        mylist2 = []
+
+    return mylist3
