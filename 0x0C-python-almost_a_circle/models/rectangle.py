@@ -54,3 +54,19 @@ class Rectangle(Base):
     def y(self, value):
         self.intvalidator("y", value)
         self.__y = value
+
+    def area(self):
+        """ def """
+        return (self.__width * self.__height)
+
+    def display(self):
+        """ def """
+        for i in range(self.__height):
+            for a in range(self.__width - 1):
+                print("#", end = "")
+            print("#")
+
+    def __str__(self):
+        """ def """
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x,
+        self.__y, self.__width, self.__height)
