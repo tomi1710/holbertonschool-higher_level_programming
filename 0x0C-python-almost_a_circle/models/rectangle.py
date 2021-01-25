@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ defines a class Rectangle """
 from models.base import Base
+import sys
 
 
 class Rectangle(Base):
@@ -59,14 +60,48 @@ class Rectangle(Base):
         """ def """
         return (self.__width * self.__height)
 
-    def display(self):
-        """ def """
-        for i in range(self.__height):
-            for a in range(self.__width - 1):
-                print("#", end = "")
-            print("#")
-
     def __str__(self):
         """ def """
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x,
         self.__y, self.__width, self.__height)
+
+    def display(self):
+        """ def """
+        for a in range(self.__y):
+            print("")
+        for c in range(self.__height):
+            for b in range(self.__x):
+                print(" ", end = "")
+            for d in range(self.__width - 1):
+                print("#", end = "")
+            print("#")
+
+    def update(self, *args, **kwargs):
+        """ def """
+        if args and (len(args) > 0):
+            if len(args) > 1:
+                self.intvalidator("width", args[1])
+                self.__width = args[1]
+            if len(args) > 2:
+                self.intvalidator("height", args[2])
+                self.__height = args[2]
+            if len(args) > 3:
+                self.intvalidator("x", args[3])
+                self.__x = args[3]
+            if len(args) > 4:
+                self.intvalidator("y", args[4])
+                self.__y = args[4]
+            if len(args) > 0:
+                self.id = args[0]
+        else:
+            for key, val in kwargs.items():
+                if key == "id":
+                    self.id = val
+                elif key == "width":
+                    self.__width = val
+                elif key == "height":
+                    self.__height = val
+                elif key == "x":
+                    self.__x = val
+                elif key == "y":
+                    self.__y = val
