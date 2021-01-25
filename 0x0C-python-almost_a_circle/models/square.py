@@ -27,3 +27,36 @@ class Square(Rectangle):
         """ def """
         return "[Square] ({}) {}/{} - {}".format(self.id, self._Rectangle__x,
                                                 self._Rectangle__y, self.__size)
+
+    def update(self, *args, **kwargs):
+
+        if args and len(args) > 0:
+            if len(args) > 0:
+                self.id = args[0]
+            if len(args) > 1:
+                self.intvalidator("width", args[1])
+                self.__size = args[1]
+            if len(args) > 2:
+                self.intvalidator("x", args[2])
+                self._Rectangle__x = args[2]
+            if len(args) > 3:
+                self.intvalidator("y", args[3])
+                self._Rectangle__y = args[3]
+        else:
+            for key, val in kwargs.items():
+                if key == "id":
+                    self.id = val
+                if key == "size":
+                    self.intvalidator("width", val)
+                    self.__size = val
+                if key == "x":
+                    self.intvalidator("x", val)
+                    self._Rectangle__x = val
+                if key == "y":
+                    self.intvalidator("y", val)
+                    self._Rectangle__y = val
+
+    def to_dictionary(self):
+        """ def """
+        return {"x": self._Rectangle__x, "y": self._Rectangle__y,
+        "id": self.id, "size": self.__size}
