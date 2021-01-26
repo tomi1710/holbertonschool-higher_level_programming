@@ -2,6 +2,8 @@
 """ defines a class Rectangle """
 from models.base import Base
 import sys
+import json
+import csv
 
 
 class Rectangle(Base):
@@ -22,37 +24,45 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        return self.width
+        """ def """
+        return self.__width
 
     @width.setter
     def width(self, value):
+        """ def """
         self.intvalidator("width", value)
         self.__width = value
 
     @property
     def height(self):
-        return self.height
+        """ def """
+        return self.__height
 
     @height.setter
     def height(self, value):
+        """ def """
         self.intvalidator("height", value)
         self.__height = value
 
     @property
     def x(self):
-        return self.x
+        """ def """
+        return self.__x
 
     @x.setter
     def x(self, value):
+        """ def """
         self.intvalidator("x", value)
         self.__x = value
 
     @property
     def y(self):
-        return self.y
+        """ def """
+        return self.__y
 
     @y.setter
     def y(self, value):
+        """ def """
         self.intvalidator("y", value)
         self.__y = value
 
@@ -63,7 +73,8 @@ class Rectangle(Base):
     def __str__(self):
         """ def """
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x,
-        self.__y, self.__width, self.__height)
+                                                       self.__y, self.__width,
+                                                       self.__height)
 
     def display(self):
         """ def """
@@ -71,9 +82,9 @@ class Rectangle(Base):
             print("")
         for c in range(self.__height):
             for b in range(self.__x):
-                print(" ", end = "")
+                print(" ", end="")
             for d in range(self.__width - 1):
-                print("#", end = "")
+                print("#", end="")
             print("#")
 
     def update(self, *args, **kwargs):
@@ -109,4 +120,4 @@ class Rectangle(Base):
     def to_dictionary(self):
         """ def """
         return {"x": self.__x, "y": self.__y, "id": self.id,
-        "width": self.__width, "height": self.__height}
+                "width": self.__width, "height": self.__height}

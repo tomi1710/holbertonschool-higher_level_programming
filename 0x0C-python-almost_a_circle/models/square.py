@@ -3,6 +3,8 @@
 from models.rectangle import Rectangle
 from models.base import Base
 import sys
+import csv
+import json
 
 
 class Square(Rectangle):
@@ -26,10 +28,11 @@ class Square(Rectangle):
     def __str__(self):
         """ def """
         return "[Square] ({}) {}/{} - {}".format(self.id, self._Rectangle__x,
-                                                self._Rectangle__y, self.__size)
+                                                 self._Rectangle__y,
+                                                 self.__size)
 
     def update(self, *args, **kwargs):
-
+        """ def """
         if args and len(args) > 0:
             if len(args) > 0:
                 self.id = args[0]
@@ -59,4 +62,4 @@ class Square(Rectangle):
     def to_dictionary(self):
         """ def """
         return {"x": self._Rectangle__x, "y": self._Rectangle__y,
-        "id": self.id, "size": self.__size}
+                "id": self.id, "size": self.__size}
