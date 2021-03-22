@@ -1,7 +1,5 @@
 # 0x12. JavaScript - Warm up
 
-![alt text](https://github.com/facu2279/holbertonschool-higher_level_programming/blob/main/0x12-javascript-warm_up/java.png)
-
 General
 ---------
 - Why JavaScript programming is amazing
@@ -35,9 +33,4 @@ Requirements
 
 
 # Authors
-Made by [Facundo Diaz](https://github.com/facu2279) to Holberton School 2020
-
-Social Networks
--------------------
-- [Linkedin](https://www.linkedin.com/in/facundo-d%C3%ADaz-720110149/)
-- [Twitter](https://twitter.com/facudiazuy)
+Made by Tomas de Castro
