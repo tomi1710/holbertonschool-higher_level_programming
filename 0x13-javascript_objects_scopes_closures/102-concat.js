@@ -10,10 +10,10 @@ let alltext = fs.readFileSync(first,
     if (err) { console.log(err); }
   });
 
-  alltext += fs.readFileSync(second,
+alltext += fs.readFileSync(second,
   { encoding: 'utf8', flag: 'r' },
   function (err, data) {
     if (err) { console.log(err); }
   });
 
-  fs.writeFileSync(path, alltext);
+fs.writeFileSync(path, alltext);
