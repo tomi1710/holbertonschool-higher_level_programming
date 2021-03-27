@@ -16,5 +16,6 @@ if __name__ == "__main__":
     consulta.execute("SELECT * FROM states WHERE name ='{}'".format(argument))
     resultado = consulta.fetchall()
     for fila in resultado:
-        print(fila)
+        if fila[1] == argument:
+            print(fila)
     nuevaconexion.close()
