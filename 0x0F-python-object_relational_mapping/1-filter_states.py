@@ -17,4 +17,3 @@ if __name__ == "__main__":
         if fila[1][0] == 'N':
             print(fila)
     nuevaconexion.close()
-    
