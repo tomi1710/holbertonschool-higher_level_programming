@@ -12,10 +12,8 @@ if __name__ == "__main__":
                            pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
-    first_element = session.query(State).filter(State.id == 1).first()
-    if (first_element):
-        print(first_element.id, end="")
-        print(": ", end="")
-        print(first_element.name)
-    else:
-        print("Nothing")
+    for instance in session.query(State).order_by(State.id):
+        if "a" in instance.name or "A" in instance.name:
+            print(instance.id, end="")
+            print(": ", end="")
+            print(instance.name)
