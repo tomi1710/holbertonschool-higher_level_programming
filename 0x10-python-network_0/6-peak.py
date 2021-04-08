@@ -11,9 +11,10 @@ def find_peak(listt):
     if len(listt) == 2:
         return (max(listt))
     half = int(len(listt) / 2)
-    if listt[half - 1] < listt[half] > listt[half + 1]:
-        return (listt[half])
-    elif listt[half] < listt[half + 1]:
-        return (find_peak(listt[listt[half]:]))
+    middle = listt[half]
+    if listt[half - 1] < middle > listt[half + 1]:
+        return (middle)
+    elif middle < listt[half + 1]:
+        return (find_peak(listt[middle:]))
     else:
         return (find_peak(listt[:listt[half + 1]]))
