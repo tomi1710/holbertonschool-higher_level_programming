@@ -17,4 +17,4 @@ def find_peak(listt):
     elif middle < listt[half - 1]:
         return (find_peak(listt[:listt[half + 1]]))
     else:
-        return (find_peak(listt[middle:))
+        return (find_peak(listt[middle:]))
