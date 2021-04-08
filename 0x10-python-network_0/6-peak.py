@@ -6,9 +6,9 @@ def find_peak(listt):
     """ def func """
     if len(listt) == 0:
         return (None)
-    if len(listt) == 1:
+    elif len(listt) == 1:
         return (listt[0])
-    if len(listt) == 2:
+    elif len(listt) == 2:
         return (max(listt))
     half = int(len(listt) / 2)
     middle = listt[half]
